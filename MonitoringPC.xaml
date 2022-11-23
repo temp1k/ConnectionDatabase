@@ -1,0 +1,25 @@
+﻿<Window x:Class="DataSet_WPF_DB_App.MonitoringPC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataSet_WPF_DB_App"
+        mc:Ignorable="d"
+        Title="MonitoringPC" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Label Foreground="#64ac8f" Content="Мониторинг аппаратной части ПК" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" Height="49" Width="774" HorizontalContentAlignment="Center" FontSize="30"/>
+        <ProgressBar Maximum="100" x:Name="cpuMonitor" HorizontalAlignment="Left" Height="43" Margin="106,98,0,0" VerticalAlignment="Top" Width="428"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,98,0,0" TextWrapping="Wrap" FontSize="30" Text="CPU" VerticalAlignment="Top" Height="43" Width="86"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,146,0,0" TextWrapping="Wrap" FontSize="30" Text="RAM" VerticalAlignment="Top" Height="43" Width="86"/>
+        <ProgressBar Maximum="100" x:Name="ramMonitor" HorizontalAlignment="Left" Height="43" Margin="106,146,0,0" VerticalAlignment="Top" Width="428"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,194,0,0" TextWrapping="Wrap" FontSize="30" Text="SSD" VerticalAlignment="Top" Height="43" Width="86"/>
+        <ProgressBar Maximum="100" x:Name="ssdMonitor" HorizontalAlignment="Left" Height="43" Margin="106,194,0,0" VerticalAlignment="Top" Width="428"/>
+        <TextBlock x:Name="cpuPerc" HorizontalAlignment="Left" Margin="557,98,0,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="43" Width="120"><Run Text="0.0"/><Run Text="%"/></TextBlock>
+        <TextBlock x:Name="ramPerc" HorizontalAlignment="Left" Margin="557,146,0,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="43" Width="120"><Run Text="0"/><Run Text=".0%"/></TextBlock>
+        <TextBlock x:Name="ssdPerc" HorizontalAlignment="Left" Margin="557,194,0,0" TextWrapping="Wrap" FontSize="30" Text="0.0%" VerticalAlignment="Top" Height="43" Width="120"/>
+        <TextBlock x:Name="tbNet" HorizontalAlignment="Left" Margin="557,237,0,0" TextWrapping="Wrap" FontSize="30" Text="0.0%" VerticalAlignment="Top" Height="43" Width="120"/>
+        <Button FontSize="40" IsCancel="True" Content="Выход" HorizontalAlignment="Left" Margin="190,328,0,0" VerticalAlignment="Top" Width="381" Height="62" HorizontalContentAlignment="Center" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,242,0,0" TextWrapping="Wrap" FontSize="30" Text="NET" VerticalAlignment="Top" Height="43" Width="86"/>
+        <ProgressBar x:Name="netPerc" Maximum="100" HorizontalAlignment="Left" Margin="106,242,0,0" FontSize="30" VerticalAlignment="Top" Height="43" Width="428"/>
+    </Grid>
+</Window>
